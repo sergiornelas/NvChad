@@ -28,15 +28,15 @@ local plugins = {
     end,
   },
 
-  ["NvChad/nvterm"] = {
-    module = "nvterm",
-    config = function()
-      require "plugins.configs.nvterm"
-    end,
-    setup = function()
-      require("core.utils").load_mappings "nvterm"
-    end,
-  },
+  -- ["NvChad/nvterm"] = {
+  --   module = "nvterm",
+  --   config = function()
+  --     require "plugins.configs.nvterm"
+  --   end,
+  --   setup = function()
+  --     require("core.utils").load_mappings "nvterm"
+  --   end,
+  -- },
 
   ["kyazdani42/nvim-web-devicons"] = {
     after = "ui",
@@ -46,16 +46,16 @@ local plugins = {
     end,
   },
 
-  ["lukas-reineke/indent-blankline.nvim"] = {
-    opt = true,
-    setup = function()
-      require("core.lazy_load").on_file_open "indent-blankline.nvim"
-      require("core.utils").load_mappings "blankline"
-    end,
-    config = function()
-      require("plugins.configs.others").blankline()
-    end,
-  },
+  -- ["lukas-reineke/indent-blankline.nvim"] = {
+  --   opt = true,
+  --   setup = function()
+  --     require("core.lazy_load").on_file_open "indent-blankline.nvim"
+  --     require("core.utils").load_mappings "blankline"
+  --   end,
+  --   config = function()
+  --     require("plugins.configs.others").blankline()
+  --   end,
+  -- },
 
   ["NvChad/nvim-colorizer.lua"] = {
     opt = true,
@@ -159,13 +159,13 @@ local plugins = {
     end,
   },
 
-  ["goolord/alpha-nvim"] = {
-    after = "base46",
-    disable = true,
-    config = function()
-      require "plugins.configs.alpha"
-    end,
-  },
+  -- ["goolord/alpha-nvim"] = {
+  --   after = "base46",
+  --   disable = true,
+  --   config = function()
+  --     require "plugins.configs.alpha"
+  --   end,
+  -- },
 
   ["numToStr/Comment.nvim"] = {
     module = "Comment",
@@ -201,17 +201,17 @@ local plugins = {
   },
 
   -- Only load whichkey after all the gui
-  ["folke/which-key.nvim"] = {
-    disable = true,
-    module = "which-key",
-    keys = "<leader>",
-    config = function()
-      require "plugins.configs.whichkey"
-    end,
-    setup = function()
-      require("core.utils").load_mappings "whichkey"
-    end,
-  },
+  -- ["folke/which-key.nvim"] = {
+  --   disable = true,
+  --   module = "which-key",
+  --   keys = "<leader>",
+  --   config = function()
+  --     require "plugins.configs.whichkey"
+  --   end,
+  --   setup = function()
+  --     require("core.utils").load_mappings "whichkey"
+  --   end,
+  -- },
 
   -- Speed up deffered plugins
   ["lewis6991/impatient.nvim"] = {},
